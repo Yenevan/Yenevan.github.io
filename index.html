@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group ARAYAS</title>
+    <body>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: #ffffff;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            p {
+                text-align: justify;
+                line-height: 1.6;
+                color: #ffffff;
+            }
+        </style>
+        <h1>Nuestro Grupito ARAYAS</h1>
+        <p>Nosotros somos un grupito conformado por Abigail, Reichel, Ashley, Sofía, Antonio y Yenevan.</p>
+        <p>Decidimos darle vida a nuestro grupo, y le pusimos "Group ARAYAS", que son las iniciales de todos.</p>
+        <p>En resumen, en tan poco tiempo hemos hecho, vivido y pasado un sin fin de cosa. La unión de nuestro grupo es tan fuerte que nunca hemos tenido problemas, celos, o algún otro dipo de cosas nadaquever que suceden con otros grupos de amigos.</p>
+        <p>Somos tan sinceros entre nosotros, compartimos todo, nos escuchamos, nos entendemos, nos apoyamos, y así. somos casi un grupo de amigos perfecto, y seguiremos mejorando individualmete para ser aun más increibles de lo que ya somos.</p>
+        <p>Acá mostraremos una foto de cada uno, luego una foto espectacular y despues un gorraso.</p>
+    </body>
+    <style>
+             body {
+                background: #0f0c29;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            }  
+
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+<div class="carousel">
+    <div id="mainCarouselImages" class="carousel-images">
+        <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1900&h=1400" alt="Slide 1">
+        <img src="https://purina.co.cr/sites/default/files/2022-10/purina-10-datos-curiosos-sobre-los-gatos.png" alt="Slide 2">
+        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/41c7e7ce298604b0801fc2b1b76371a47e9ebb83-950x633.jpg?fm=webp&q=80" alt="Slide 3">
+    </div>
+    <div class="carousel-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const carouselImages = document.getElementById('mainCarouselImages');
+            const totalImages = carouselImages.children.length;
+            if (index >= totalImages) currentIndex = 0;
+            else if (index < 0) currentIndex = totalImages - 1;
+            else currentIndex = index;
+        
+            const offset = -currentIndex * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    </script>
+    <div>    
+        <style>
+            .text-h2 {
+                text-align: center;
+                background-color: #544a7d;
+                border-radius: 15px;
+                color: #ffffff;
+            }
+            .text-h1 {
+                text-align: center;
+                background-color: #544a7d;
+                border-radius: 15px;
+                color: #ffffff;
+            }
+        </style>
+    <p>Realizaremos una presentación de cada uno, pero entre todos daremos nuestra perspectiva de cada uno del Group ARAYAS.</p>
+    <!-- Individual Image Containers -->
+    <div id="imageContainer1" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 class="text-h1" id="imageTitle1">ABIGAIL</h1>
+        <img src="https://static.nationalgeographic.es/files/styles/image_3200/public/nationalgeographic_1468962.jpg?w=1900&h=1400" alt="Image 1" style="width: 250px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle1">Abigail, más conocida por "Abichuela", ella con su encanto venenozo JAJA</h2>
+    </div>
+
+    <div id="imageContainer2" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 id="imageTitle2">ASHLEY</h1>
+        <img src="https://purina.co.cr/sites/default/files/2022-10/purina-10-datos-curiosos-sobre-los-gatos.png" alt="Image 2" style="width: 205px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle2">Ashley, que podremos decir de ella, unicamente en su cabeza lo que piensa es en empanadas.</h2>
+    </div>
+
+    <div id="imageContainer3" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 id="imageTitle3">SOFIA</h1>
+        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/41c7e7ce298604b0801fc2b1b76371a47e9ebb83-950x633.jpg?fm=webp&q=80" alt="Image 3" style="width: 205px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle3">TRACR</h2>
+    </div>
+
+    <div id="imageContainer4" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 id="imageTitle4">ANTONIO</h1>
+        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/41c7e7ce298604b0801fc2b1b76371a47e9ebb83-950x633.jpg?fm=webp&q=80" alt="Image 3" style="width: 205px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle4">TONY</h2>
+    </div>
+
+    <div id="imageContainer5" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 id="imageTitle5">REICHEL</h1>
+        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/41c7e7ce298604b0801fc2b1b76371a47e9ebb83-950x633.jpg?fm=webp&q=80" alt="Image 3" style="width: 205px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle5">REI</h2>
+    </div>
+
+    <div id="imageContainer6" class="image-container" style="margin-top: 20px; text-align: center;">
+        <h1 id="imageTitle6">YENEVAN</h1>
+        <img src="https://cdn.sanity.io/images/5vm5yn1d/pro/41c7e7ce298604b0801fc2b1b76371a47e9ebb83-950x633.jpg?fm=webp&q=80" alt="Image 3" style="width: 205px; height: 250px;">
+        <h2 class="text-h2" id="imageSubtitle6">YEN</h2>
+    </div>
+
+    <script>
+        let overlayCurrentIndex = 0;
+
+        function toggleImage1() {
+            document.getElementById('imageContainer1').style.display = 'block';
+            document.getElementById('closeCarouselButton1').style.display = 'inline-block';
+        }
+
+        function closeImage1() {
+            document.getElementById('imageContainer1').style.display = 'none';
+            document.getElementById('closeCarouselButton1').style.display = 'none';
+        }
+
+        function toggleImage2() {
+            document.getElementById('imageContainer2').style.display = 'block';
+            document.getElementById('closeCarouselButton2').style.display = 'inline-block';
+        }
+
+        function closeImage2() {
+            document.getElementById('imageContainer2').style.display = 'none';
+            document.getElementById('closeCarouselButton2').style.display = 'none';
+        }
+
+        function toggleImage3() {
+            document.getElementById('imageContainer3').style.display = 'block';
+            document.getElementById('closeCarouselButton3').style.display = 'inline-block';
+        }
+
+        function closeImage3() {
+            document.getElementById('imageContainer3').style.display = 'none';
+            document.getElementById('closeCarouselButton3').style.display = 'none';
+        }
+
+        function openOverlay() {
+            document.getElementById('overlay').style.display = 'flex';
+            showOverlaySlide(overlayCurrentIndex);
+        }
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showOverlaySlide(index) {
+            const overlayCarouselImages = document.getElementById('uniqueOverlayCarouselImages');
+            const totalImages = overlayCarouselImages.children.length;
+            if (index >= totalImages) overlayCurrentIndex = 0;
+            else if (index < 0) overlayCurrentIndex = totalImages - 1;
+            else overlayCurrentIndex = index;
+
+            const offset = -overlayCurrentIndex * (100 / totalImages);
+            overlayCarouselImages.style.transform = `translateX(${offset}%)`;
+
+            const titles = ["HOLA", "QUE HACES", "ADIOS"];
+            const subtitles = ["COMO ESTAS", "NADAM", "HASTA LUEGO"];
+            document.getElementById('overlayTitle').innerText = titles[overlayCurrentIndex];
+            document.getElementById('overlaySubtitle').innerText = subtitles[overlayCurrentIndex];
+        }
+
+        function nextOverlaySlide() {
+            showOverlaySlide(overlayCurrentIndex + 1);
+        }
+
+        function prevOverlaySlide() {
+            showOverlaySlide(overlayCurrentIndex - 1);
+        }
+    </script>
+    <style>
+        #overlay {
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+        }
+        #overlay > div {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 20px;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #overlay textarea {
+            width: 80%;
+            height: 150px;
+        }
+    </style>
+   
+</body>
+</html>
