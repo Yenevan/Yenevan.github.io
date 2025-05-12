@@ -3,73 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Group ARAYAS</title>
-    <body>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f0f0f0;
-                color: #333;
-                margin: 0;
-                padding: 20px;
+
+    <script>
+        function validateLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (username === 'ARAYAS' && password === 'ARAYAS2025') {
+                alert('Inicio de sesión exitoso');
+                document.getElementById('mainContent').style.display = 'block';
+                document.getElementById('loginSection').style.display = 'none';
+            } else {
+                alert('Usuario o contraseña incorrectos');
             }
-            h1 {
-                text-align: center;
-                color: #ffffff;
-                font-family: 'Times New Roman', Times, serif;
-            }
-            p {
-                text-align: justify;
-                line-height: 1.6;
-                color: #ffffff;
-            }
-        </style>
-        <h1>Nuestro Grupito ARAYAS</h1>
-        <p>Nosotros somos un grupito conformado por Abigail, Reichel, Ashley, Sofía, Antonio y Yenevan.</p>
-        <p>Decidimos darle vida a nuestro grupo, y le pusimos "Group ARAYAS", que son las iniciales de todos.</p>
-        <p>En resumen, en tan poco tiempo hemos hecho, vivido y pasado un sin fin de cosa. La unión de nuestro grupo es tan fuerte que nunca hemos tenido problemas, celos, o algún otro dipo de cosas nadaquever que suceden con otros grupos de amigos.</p>
-        <p>Somos tan sinceros entre nosotros, compartimos todo, nos escuchamos, nos entendemos, nos apoyamos, y así. somos casi un grupo de amigos perfecto, y seguiremos mejorando individualmete para ser aun más increibles de lo que ya somos.</p>
-        <p>Acá mostraremos una foto de cada uno, luego una foto espectacular y despues un gorraso.</p>
-    </body>
+        }
+    </script>
     <style>
-             body {
-                background: #0f0c29;  /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        #mainContent {
+            display: none;
+        }
 
-            }  
+        .formulario {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-        .carousel {
-            position: relative;
-            max-width: 600px;
-            margin: auto;
-            overflow: hidden;
+        .formulario h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
         }
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+
+        .formulario .input-group {
+            margin-bottom: 15px;
         }
-        .carousel-images img {
+
+        .formulario .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .formulario .input-group input {
             width: 100%;
-            height: auto;
-            flex-shrink: 0;
-        }
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .carousel-buttons button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
             padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .formulario .input-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .formulario .actions {
+            text-align: center;
+        }
+
+        .formulario .actions input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
         }
-      </style>
+
+        .formulario .actions input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .formulario .actions .forgot-password {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .formulario .actions .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            loginForm.addEventListener('submit', validateLogin);
+        });
+    </script>
+    
+    <body class="bodyinitial">
+        <!-- INICIO DE SESION -->
+         <div class="formulario">
+            <h1>Iniciar Sesión</h1>
+            <form method="post">
+                <div class="username">
+                    <input type="text" required>
+                    <label>Nombre de usuario</label>
+                </div>
+                <div class="contraseña">
+                    <input type="password" required>
+                    <label>Contraseña</label>
+                </div>
+                <div class="recordar">¿Olvido su contraseña?</div>
+                <input type="submit" value="Iniciar">
+                <div class="registrarse">
+                    Quiero hacer el <a href="#">registro</a>
+                </div>
+
+            </form>
+         </div>
+    </body>
+    <body>
+        <h1 class="titleinitialh1">Nuestro Grupito ARAYAS</h1>
+        <p class="texteinicitialbody">Nosotros somos un grupito conformado por Abigail, Reichel, Ashley, Sofía, Antonio y Yenevan.</p>
+        <p class="texteinicitialbody">Decidimos darle vida a nuestro grupo, y le pusimos "Group ARAYAS", que son las iniciales de todos.</p>
+        <p class="texteinicitialbody">En resumen, en tan poco tiempo hemos hecho, vivido y pasado un sin fin de cosa. La unión de nuestro grupo es tan fuerte que nunca hemos tenido problemas, celos, o algún otro dipo de cosas nadaquever que suceden con otros grupos de amigos.</p>
+        <p class="texteinicitialbody">Somos tan sinceros entre nosotros, compartimos todo, nos escuchamos, nos entendemos, nos apoyamos, y así. somos casi un grupo de amigos perfecto, y seguiremos mejorando individualmete para ser aun más increibles de lo que ya somos.</p>
+        <p class="texteinicitialbody">Acá mostraremos una foto de cada uno, luego una foto espectacular y despues un gorraso.</p>
+    </body>
 </head>
 <body>
 <div class="carousel">
@@ -78,7 +140,7 @@
         <img src="img/Reichel.jpg" alt="Slide 2" width="250" height="250">
         <img src="img/Ashley.jpg" alt="Slide 3" width="250" height="250">
         <img src="img/Sofia.jpg" alt="Slide 4" width="250" height="250">
-        <img src="img/Antonio.jpg" alt="Slide 5" width="250" height="250">
+        <img src="img/Antonio2.jpg" alt="Slide 5" width="250" height="250">
         <img src="img/Yenevan.jpg" alt="Slide 6" width="250" height="250">
     </div>
     <div class="carousel-buttons">
@@ -108,55 +170,41 @@
             showSlide(currentIndex - 1);
         }
     </script>
-    <div>    
-        <style>
-            .text-h2 {
-                text-align: center;
-                background-color: #544a7d;
-                border-radius: 15px;
-                color: #ffffff;
-            }
-            .text-h1 {
-                text-align: center;
-                background-color: #544a7d;
-                border-radius: 15px;
-                color: #ffffff;
-            }
-        </style>
-    <p>Realizaremos una presentación de cada uno, pero entre todos daremos nuestra perspectiva de cada uno del Group ARAYAS.</p>
+
+    <p class="inicialp">Realizaremos una presentación de cada uno, pero entre todos daremos nuestra perspectiva de cada uno del Group ARAYAS.</p>
     <!-- Individual Image Containers -->
     <div id="imageContainer1" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 class="text-h1" id="imageTitle1">ABIGAIL</h1>
+        <h1 class="textini-h1" id="imageTitle1">ABIGAIL</h1>
         <img src="img/Abigail.jpg" alt="Image 1" style="width: 250px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle1">Abigail, más conocida por "Abichuela", ella con su encanto venenozo JAJA</h2>
     </div>
 
     <div id="imageContainer2" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 id="imageTitle2">REICHEL</h1>
+        <h1 class="textini-h1" id="imageTitle2">REICHEL</h1>
         <img src="img/Reichel.jpg" alt="Image 2" style="width: 205px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle2">Ashley, que podremos decir de ella, unicamente en su cabeza lo que piensa es en empanadas.</h2>
     </div>
 
     <div id="imageContainer3" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 id="imageTitle3">ASHLEY</h1>
+        <h1 class="textini-h1" id="imageTitle3">ASHLEY</h1>
         <img src="img/Ashley.jpg" alt="Image 3" style="width: 205px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle3">TRACR</h2>
     </div>
 
     <div id="imageContainer4" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 id="imageTitle4">SOFÍA</h1>
+        <h1 class="textini-h1" id="imageTitle4">SOFÍA</h1>
         <img src="img/Sofia.jpg" alt="Image 3" style="width: 205px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle4">TONY</h2>
     </div>
 
     <div id="imageContainer5" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 id="imageTitle5">ANTONIO</h1>
-        <img src="img/Antonio.jpg" alt="Image 3" style="width: 205px; height: 250px;">
+        <h1 class="textini-h1" id="imageTitle5">ANTONIO</h1>
+        <img src="img/Antonio2.jpg" alt="Image 3" style="width: 205px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle5">REI</h2>
     </div>
 
     <div id="imageContainer6" class="image-container" style="margin-top: 20px; text-align: center;">
-        <h1 id="imageTitle6">YENEVAN</h1>
+        <h1 class="textini-h1" id="imageTitle6">YENEVAN</h1>
         <img src="img/Yenevan.jpg" alt="Image 3" style="width: 205px; height: 250px;">
         <h2 class="text-h2" id="imageSubtitle6">YEN</h2>
     </div>
@@ -227,28 +275,6 @@
             showOverlaySlide(overlayCurrentIndex - 1);
         }
     </script>
-    <style>
-        #overlay {
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(10px);
-        }
-        #overlay > div {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 20px;
-            border-radius: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #overlay textarea {
-            width: 80%;
-            height: 150px;
-        }
-    </style>
    
 </body>
 </html>
