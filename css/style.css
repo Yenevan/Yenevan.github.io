@@ -109,7 +109,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    background: #fff;
+    background-color: #fff;
     border-radius: 10px;
 } listo
 
@@ -227,7 +227,6 @@ input[type="submit"]:hover {
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -240,7 +239,7 @@ input[type="submit"]:hover {
             left: 50%;
             transform: translate(-50%, -50%);
             width: 400px;
-            background: #fff;
+            
             border-radius: 20px;
             
         }
